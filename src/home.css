@@ -1,0 +1,39 @@
+@media (orientation: portrait) {
+  .categorycard {
+    width: 95%;
+  }
+
+  .categorymain {
+    margin-top: 12rem;
+  }
+
+  .bodydiv {
+    height: fit-content;
+  }
+
+  .landscapebtn {
+    display: none;
+  }
+
+  .portraitbtn {
+    display: block;
+  }
+}
+
+@media (orientation: landscape) {
+  .categorycard {
+    width: 30%;
+  }
+
+  .bodydiv {
+    height: 100vh;
+  }
+
+  .landscapebtn {
+    display: block;
+  }
+
+  .portraitbtn {
+    display: none;
+  }
+}
