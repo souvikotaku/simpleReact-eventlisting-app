@@ -103,12 +103,30 @@ export default class HomePage extends Component {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit
                     </p>
                     <button
+                      //   href="/ListingPage"
                       className="btn btn-primary btn-block"
                       onClick={() => {
+                        // const newurl = `https${eventcategory.data.slice(
+                        //   4,
+                        //   eventcategory.data.length
+                        // )}`;
+                        // window.location = "/ListingPage";
                         axios
-                          .get(eventcategory.data)
+                          .get(
+                            "https://" +
+                              eventcategory.data.slice(
+                                7,
+                                eventcategory.data.length
+                              )
+                          )
                           .then((response) => {
                             console.log(response.data);
+                            // console.log(
+                            //   eventcategory.data.slice(
+                            //     4,
+                            //     eventcategory.data.length
+                            //   )
+                            // );
                             localStorage.setItem(
                               "listdata",
                               JSON.stringify(response.data.item)
